@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17252a">
+  <meta name="description" content="A quiet, illustrated night post office holding three undelivered letters.">
+  <title>The Lost Letter Office</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-weather="rainy">
+  <main class="office" aria-labelledby="story-title">
+    <div class="paper-grain" aria-hidden="true"></div>
+    <div class="lamp-glow" aria-hidden="true"></div>
+
+    <header class="masthead">
+      <p class="eyebrow">After midnight · all undelivered things come here</p>
+      <h1 id="story-title">The Lost Letter Office</h1>
+      <p class="intro">Some letters lose their way. Some are never brave enough to leave.</p>
+    </header>
+
+    <section class="room" aria-label="The night post office">
+      <div class="back-wall" aria-hidden="true">
+        <div class="wall-shadow"></div>
+        <div class="sorting-shelf shelf-one"><span>RETURN</span><span>UNKNOWN</span><span>TO KEEP</span></div>
+        <div class="sorting-shelf shelf-two"><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+
+      <section class="window" aria-label="Night window">
+        <div class="window-header">
+          <span>12:07 AM</span>
+          <button class="weather-toggle" id="weatherToggle" type="button" aria-pressed="true" aria-label="Change weather. Currently rainy">
+            <span class="weather-icon" aria-hidden="true">☂</span>
+            <span class="weather-text">Rain</span>
+          </button>
+        </div>
+        <div class="window-view">
+          <div class="moon" aria-hidden="true"></div>
+          <div class="cloud cloud-a" aria-hidden="true"></div>
+          <div class="cloud cloud-b" aria-hidden="true"></div>
+          <div class="rain" aria-hidden="true"></div>
+          <div class="rooftops" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <div class="window-mist" aria-hidden="true"></div>
+          <div class="window-frame" aria-hidden="true"><i></i><i></i></div>
+        </div>
+        <p class="weather-caption" aria-live="polite">Rain gathers softly on the glass.</p>
+      </section>
+
+      <aside class="notice" aria-label="Office notice">
+        <span class="pin"></span>
+        <p>For letters<br>with nowhere<br>else to go.</p>
+        <small>— Night Clerk</small>
+      </aside>
+
+      <section class="desk-scene" aria-label="Wooden sorting desk">
+        <div class="lamp" aria-label="Desk lamp">
+          <div class="lamp-shade"><span></span></div>
+          <div class="lamp-neck"></div>
+          <div class="lamp-joint"></div>
+          <div class="lamp-base"></div>
+        </div>
+
+        <div class="desk-top">
+          <div class="ink-stain stain-one" aria-hidden="true"></div>
+          <div class="ink-stain stain-two" aria-hidden="true"></div>
+          <div class="letters" aria-label="Three undelivered letters">
+            <button class="letter letter-yesterday locked" type="button" data-letter="yesterday" data-state="locked" aria-label="To Yesterday, currently locked">
+              <span class="envelope-flap"></span>
+              <span class="clue-handwriting" aria-hidden="true">I remember the way home...</span>
+              <span class="stamp stamp-flower" aria-hidden="true">✾</span>
+              <span class="postmark" aria-hidden="true">18 OCT</span>
+              <span class="letter-copy">
+                <small>NOSTALGIA</small>
+                <strong>To Yesterday</strong>
+                <em>where the light still waits</em>
+              </span>
+              <span class="wax wax-rose" aria-hidden="true">L</span>
+            </button>
+
+            <button class="letter letter-unsent locked" type="button" data-letter="unsent" data-state="locked" aria-label="Never Sent, currently locked">
+              <span class="envelope-flap"></span>
+              <span class="regret-ink-bloom" aria-hidden="true"></span>
+              <span class="clue-handwriting" aria-hidden="true">I should have said...</span>
+              <span class="stamp stamp-moon" aria-hidden="true">☾</span>
+              <span class="postmark" aria-hidden="true">NO DATE</span>
+              <span class="letter-copy">
+                <small>REGRET</small>
+                <strong>Never Sent</strong>
+                <em>address unknown</em>
+              </span>
+              <span class="twine" aria-hidden="true"></span>
+            </button>
+
+            <button class="letter letter-tomorrow locked" type="button" data-letter="tomorrow" data-state="locked" aria-label="To Tomorrow, currently locked">
+              <span class="envelope-flap"></span>
+              <span class="clue-handwriting" aria-hidden="true">There is still time...</span>
+              <span class="stamp stamp-star" aria-hidden="true">✦</span>
+              <span class="postmark" aria-hidden="true">SOON</span>
+              <span class="letter-copy">
+                <small>HOPE</small>
+                <strong>To Tomorrow</strong>
+                <em>please keep the light on</em>
+              </span>
+              <span class="wax wax-blue" aria-hidden="true">T</span>
+            </button>
+          </div>
+
+          <div class="desk-tools">
+            <div class="lamp-control">
+              <label for="lampBrightness"><span>☀</span> Lamp glow</label>
+              <input id="lampBrightness" type="range" min="20" max="100" value="72" aria-valuetext="72 percent">
+            </div>
+            <div class="inkwell" aria-hidden="true"><span></span></div>
+            <div class="pen" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="desk-front" aria-hidden="true"><span></span><span></span><span></span></div>
+      </section>
+    </section>
+
+    <footer class="ledger-bar">
+      <div class="discovery" aria-label="Letters discovered">
+        <span class="counter-mark" aria-hidden="true">✦</span>
+        <span><b id="discoveredCount">0</b> of 3 letters discovered</span>
+        <i class="dot"></i><i class="dot"></i><i class="dot"></i>
+      </div>
+      <p class="whisper" id="whisper" aria-live="polite">Three letters wait beneath the lamplight.</p>
+      <button class="reset" id="resetButton" type="button"><span aria-hidden="true">↺</span> Reset evening</button>
+    </footer>
+
+    <div class="letter-reader" id="letterReader" role="dialog" aria-modal="true" aria-labelledby="readerTitle" aria-describedby="readerMessage" aria-hidden="true">
+      <button class="reader-backdrop" id="readerBackdrop" type="button" aria-label="Close letter"></button>
+      <article class="reader-paper" tabindex="-1">
+        <button class="reader-close" id="readerClose" type="button" aria-label="Close letter">×</button>
+        <p class="reader-overline" id="readerTheme">Nostalgia</p>
+        <h2 id="readerTitle">To Yesterday</h2>
+        <span class="reader-rule" aria-hidden="true">✦</span>
+        <p id="readerMessage"></p>
+        <p class="reader-signoff" id="readerSignoff">— from the part of you that remembers</p>
+      </article>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
